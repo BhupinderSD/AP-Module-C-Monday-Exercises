@@ -30,10 +30,10 @@ https://repl.it/join/apydwfsf-bhupindersd
 
 https://repl.it/@BhupinderSD/Karvonen-Heart-Rate-Calculator
 
-## Exercise 6: Karvonen Heart Rate Calculator
-https://repl.it/join/apydwfsf-bhupindersd
+## Exercise 7: Zero, Positive & Negative Type Counter
+https://repl.it/join/vkndarpn-bhupindersd
 
-https://repl.it/@BhupinderSD/Karvonen-Heart-Rate-Calculator
+https://repl.it/@BhupinderSD/Zero-Positive-and-Negative-Type-Counter
 
 ## Exercise 8: Low & Largest Numbers
 https://repl.it/join/mxdwhiwj-bhupindersd
