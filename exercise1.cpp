@@ -8,7 +8,7 @@ int main() {
   std::string quote;
   std::string author;
   
-	std::cout << "What is the quote? ";
+  std::cout << "What is the quote? ";
   getline(std::cin, quote);
 
   std::cout << "Who said it? ";
