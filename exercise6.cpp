@@ -4,6 +4,11 @@
 //https://repl.it/join/apydwfsf-bhupindersd
 //https://repl.it/@BhupinderSD/Karvonen-Heart-Rate-Calculator
 
+void flushBuffer() {
+    std::cin.clear(); //resets the cin stream state so that future I/O operations work correctly
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n'); //clears the cin buffer including new lines or additional characters
+}
+
 int getNumber(std::string request) {
   int number;
 
@@ -11,11 +16,11 @@ int getNumber(std::string request) {
   std::cin >> number;
   while(std::cin.fail() || number < 0) { //while the user enters an invalid input, keep asking for a valid age 
     std::cout << "Please enter a valid age.\n\n";
-    std::cin.clear(); //clears the error flag on cin so that future I/O operations work correctly
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n'); //clear the buffer before taking new line
+    flushBuffer(); 
     std::cout << request;
     std::cin >> number;
   }
+  flushBuffer(); 
   return number;
 }
 
