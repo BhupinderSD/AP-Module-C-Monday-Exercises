@@ -9,7 +9,7 @@ int getNumber(std::string request) {
 
   std::cout << request;
   std::cin >> number;
-  while(std::cin.fail() || number < 0) {
+  while(std::cin.fail() || number < 0) { //while the user enters an invalid input, keep asking for a valid age 
     std::cout << "Please enter a valid age.\n\n";
     std::cin.clear(); //clears the error flag on cin so that future I/O operations work correctly
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n'); //clear the buffer before taking new line
@@ -19,10 +19,9 @@ int getNumber(std::string request) {
   return number;
 }
 
-//Karvonen formular
 int calculateTargetHeartRate(int age, int restingHR, float intensity) {
   int maxHR = 220 - age;
-  return ((maxHR - restingHR) * (intensity/100)) + restingHR;
+  return ((maxHR - restingHR) * (intensity/100)) + restingHR; //Karvonen formular
 }
 
 int main() {
@@ -34,7 +33,7 @@ int main() {
   std::cout << "\nIntensity\t\tRate";
   std::cout << "\n------------------------";
 
-  do {
+  do { //generate the table at intensities incrementing by 5% till 100% exclusive
   int targetHeartRate = calculateTargetHeartRate(age, pulse, intensity);
   std::cout << "\n" << intensity << "%.\t\t\t" << targetHeartRate << " bpm";
   intensity += 5;
